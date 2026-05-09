@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>[Your Name] — Aspiring Developer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p>sadly I do not own a domain yet.</p>
+  </header>
 
-    <header class="hero">
-        <nav class="nav">
-            <span class="nav__logo">&lt;YN /&gt;</span>
-            <div class="nav__links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle light and dark mode">🌙</button>
-            </div>
-        </nav>
+  <!-- Tab Navigation -->
+  <div class="tab-container">
+    <div class="tabs">
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="about">About</button>
+      <button class="tab-button" data-tab="gallery">Gallery</button>
+      <button class="tab-button" data-tab="contact">Contact</button>
+    </div>
+  </div>
 
-        <div class="hero__content">
-            <img class="hero__avatar"
-                 src="avatar.svg"
-                 alt="Avatar showing the initials of [Your Name]"
-                 width="140" height="140">
-            <h1 class="hero__name">[Your Name]</h1>
-            <p class="hero__tagline">
-                Aspiring full-stack developer learning to build for the web — one commit at a time.
-            </p>
+  <main>
+    <!-- Home Tab -->
+    <section class="tab-content active" id="home">
+      <h2>Very Secure Website</h2>
+      <p>Please don't try any SQL injections, this site is very secure.</p>
+    </section>
+
+    <!-- About Tab -->
+    <section class="tab-content" id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="profile-section">
+          <div class="profile-image">
+            <img src="images/me.jpg" alt="Profile Picture">
+          </div>
+          <div class="profile-bio">
+            <h3>Hello! I'm Jackie</h3>
+            <p>I am currently a student at LaGuardia Community College studying cybersecurity.</p>
+
+            <p>I'm also currently working as an intern at the school network department while taking part in the TTPR program.</p>
+
+            <p>In my free time, I enjoy fishkeeping and gaming.</p>
+          </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                Hi! I'm [Your Name], a student in the TTP cohort. I'm currently
-                deep in HTML, CSS, and JavaScript fundamentals, with React, Node, and
-                the rest of the stack on the road ahead. I like building things
-                that are simple, accessible, and a little bit playful.
-            </p>
-            <p>
-                Outside of code: <em>[your hobbies / interests / what makes you, you]</em>.
-            </p>
-        </section>
+    <!-- Gallery Tab -->
+    <section class="tab-content" id="gallery">
+      <h2>My Art Gallery</h2>
+      <p>A collection of my masterpieces.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/michaelzowski.png" alt="Artwork 1">
+          <p>Michaelzowski</p>
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/aniara.png" alt="Artwork 2">
+          <p>Aniara</p>
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/seanathan.jpg" alt="Artwork 3">
+          <p>Seanathan</p>
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/shrek.png" alt="Artwork 4">
+          <p>Shrek</p>
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/humpty.png" alt="Artwork 5">
+          <p>Humpty Dumpty</p>
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="images/julia.png" alt="Artwork 6">
+          <p>Julia</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <p>Tools and technologies I've worked with so far:</p>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>DOM APIs</li>
-                <li>Git &amp; GitHub</li>
-                <li>Responsive Design</li>
-                <li>VS Code</li>
-            </ul>
-        </section>
+    <!-- Contact Tab -->
+    <section class="tab-content" id="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to connect, here's the best way to reach me:</p>
+      <div class="contact-card">
+        <div class="contact-detail">
+          <strong>LinkedIn:</strong>
+          <span>linkedin.com/in/jwu-cysec</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Email:</strong>
+          <span>jwu.exe@gmail.com</span>
+        </div>
+        <a class="button" href="https://www.linkedin.com/in/jwu-cysec/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+    </section>
+  </main>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <p>A growing collection of things I've built while learning.</p>
-            <div id="projects-grid" class="projects"></div>
-        </section>
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close-button">&times;</span>
+    <img class="modal-image" id="modalImage" src="" alt="">
+  </div>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>The best ways to reach me:</p>
-            <ul class="contact">
-                <li>📧 <a href="mailto:you@example.com">you@example.com</a></li>
-                <li>🐙 <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
-                <li>💼 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> [Your Name]. Built from scratch.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer>
+    <p>Very special website.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
